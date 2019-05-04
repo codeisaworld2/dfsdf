@@ -41,7 +41,7 @@ class ArticleController extends Controller
     //文章修改显示页面
     public function edit(Request $request ,int $id){
         $input=$request->except(['_token','_method']);
-        dump($input);
+       #
          Article::where('id',$id)->update($input);
         return redirect(route('home.article.index'));
     }
